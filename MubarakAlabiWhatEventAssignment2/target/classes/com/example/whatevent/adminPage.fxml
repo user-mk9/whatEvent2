@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.whatevent.adminPageController">
+   <children>
+      <SplitPane dividerPositions="0.12164429530201341" layoutX="158.0" layoutY="71.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="199.0" layoutY="1.0" style="-fx-text-fill: red;" text="WhatEvent App Admin Page" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="508.0" layoutY="10.0" mnemonicParsing="false" onAction="#exitToHomePage" style="-fx-background-radius: 30%; -fx-text-fill: blue;" text="Logout" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" layoutX="7.0" layoutY="31.0" prefHeight="346.0" prefWidth="597.3333333333334" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TextArea fx:id="adminTextArea" layoutX="-13.0" layoutY="6.0" prefHeight="343.3333333333333" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5089141004862237" layoutX="83.0" layoutY="14.0" prefHeight="343.3333333333333" prefWidth="414.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Label layoutX="77.0" layoutY="5.0" text="Organiser" underline="true" />
+                                          <Button layoutX="14.0" layoutY="24.0" mnemonicParsing="false" onAction="#listAllOrganisers" text="List All Organisers" />
+                                          <Button layoutX="16.0" layoutY="57.0" mnemonicParsing="false" onAction="#listDetails" text="List Details" />
+                                          <TextField fx:id="emailField" layoutX="14.0" layoutY="98.0" prefHeight="25.0" prefWidth="185.0" promptText="Enter email to list details or Events" />
+                                          <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#listEvents" text="List Events" />
+                                          <Button layoutX="14.0" layoutY="170.0" mnemonicParsing="false" onAction="#deleteOrganiser" text="Delete Organiser" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Label layoutX="86.0" layoutY="5.0" text="Events" underline="true" />
+                                          <Button layoutX="56.0" layoutY="24.0" mnemonicParsing="false" onAction="#listAllEventsBtn" text="List All Events" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
